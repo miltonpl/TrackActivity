@@ -1,0 +1,4 @@
+os: osx
+osx_image: xcode12.2
+language: swift
+xcodebuild clean build test -project TrackActivity.xcodeproj -scheme "TrackActivity" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=14.4,name=iPod touch (7th generation)" ONLY_ACTIVE_ARCH=N0 CODE_SIGNG_REQUIRED=NO

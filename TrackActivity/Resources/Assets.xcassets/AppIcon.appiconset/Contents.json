@@ -31,11 +31,13 @@
       "size" : "40x40"
     },
     {
+      "filename" : "slice1_iPhoneApp_60@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
+      "filename" : "slice1_iPhoneApp_60@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"

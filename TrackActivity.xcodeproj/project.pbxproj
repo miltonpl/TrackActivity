@@ -10,13 +10,25 @@
 		5234DB9A25D58E4B008879CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5234DB9925D58E4B008879CA /* AppDelegate.swift */; };
 		5234DB9C25D58E4B008879CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5234DB9B25D58E4B008879CA /* SceneDelegate.swift */; };
 		5234DB9E25D58E4B008879CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5234DB9D25D58E4B008879CA /* ViewController.swift */; };
-		5234DBA125D58E4B008879CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5234DB9F25D58E4B008879CA /* Main.storyboard */; };
 		5234DBA325D58E4C008879CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5234DBA225D58E4C008879CA /* Assets.xcassets */; };
 		5234DBA625D58E4C008879CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5234DBA425D58E4C008879CA /* LaunchScreen.storyboard */; };
+		5234DBB825D59096008879CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5234DB9F25D58E4B008879CA /* Main.storyboard */; };
+		5234DBBF25D5AA6D008879CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5234DBBE25D5AA6D008879CA /* Constants.swift */; };
+		52CBFCC525E1BC8B009DE4F0 /* PedometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CBFCC425E1BC8B009DE4F0 /* PedometerTests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		52CBFCC725E1BC8B009DE4F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5234DB8E25D58E4A008879CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5234DB9525D58E4A008879CA;
+			remoteInfo = CoreMotionPedometer;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		5234DB9625D58E4A008879CA /* CoreMotionPedometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreMotionPedometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5234DB9625D58E4A008879CA /* TrackActivity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackActivity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5234DB9925D58E4B008879CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5234DB9B25D58E4B008879CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5234DB9D25D58E4B008879CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,10 +36,22 @@
 		5234DBA225D58E4C008879CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5234DBA525D58E4C008879CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5234DBA725D58E4C008879CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5234DBBB25D590D2008879CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		5234DBBE25D5AA6D008879CA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		52CBFCC225E1BC8B009DE4F0 /* PedometerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PedometerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52CBFCC425E1BC8B009DE4F0 /* PedometerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerTests.swift; sourceTree = "<group>"; };
+		52CBFCC625E1BC8B009DE4F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5234DB9325D58E4A008879CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52CBFCBF25E1BC8B009DE4F0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,7 +64,8 @@
 		5234DB8D25D58E4A008879CA = {
 			isa = PBXGroup;
 			children = (
-				5234DB9825D58E4A008879CA /* CoreMotionPedometer */,
+				5234DB9825D58E4A008879CA /* TrackActivity */,
+				52CBFCC325E1BC8B009DE4F0 /* PedometerTests */,
 				5234DB9725D58E4A008879CA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,31 +73,106 @@
 		5234DB9725D58E4A008879CA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5234DB9625D58E4A008879CA /* CoreMotionPedometer.app */,
+				5234DB9625D58E4A008879CA /* TrackActivity.app */,
+				52CBFCC225E1BC8B009DE4F0 /* PedometerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5234DB9825D58E4A008879CA /* CoreMotionPedometer */ = {
+		5234DB9825D58E4A008879CA /* TrackActivity */ = {
 			isa = PBXGroup;
 			children = (
-				5234DB9925D58E4B008879CA /* AppDelegate.swift */,
-				5234DB9B25D58E4B008879CA /* SceneDelegate.swift */,
-				5234DB9D25D58E4B008879CA /* ViewController.swift */,
-				5234DB9F25D58E4B008879CA /* Main.storyboard */,
-				5234DBA225D58E4C008879CA /* Assets.xcassets */,
-				5234DBA425D58E4C008879CA /* LaunchScreen.storyboard */,
-				5234DBA725D58E4C008879CA /* Info.plist */,
+				5234DBB325D58ED7008879CA /* Sopport Files */,
+				5234DBB425D58EEC008879CA /* Resources */,
+				5234DBB025D58EAF008879CA /* Screens */,
+				5234DBAF25D58EAF008879CA /* Commons */,
 			);
-			path = CoreMotionPedometer;
+			path = TrackActivity;
+			sourceTree = "<group>";
+		};
+		5234DBAF25D58EAF008879CA /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				5234DBC125D5AA72008879CA /* Constants */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		5234DBB025D58EAF008879CA /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5234DBB125D58EAF008879CA /* Main */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		5234DBB125D58EAF008879CA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5234DBB225D58EB0008879CA /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5234DBB225D58EB0008879CA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5234DB9D25D58E4B008879CA /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5234DBB325D58ED7008879CA /* Sopport Files */ = {
+			isa = PBXGroup;
+			children = (
+				5234DB9B25D58E4B008879CA /* SceneDelegate.swift */,
+				5234DB9925D58E4B008879CA /* AppDelegate.swift */,
+			);
+			path = "Sopport Files";
+			sourceTree = "<group>";
+		};
+		5234DBB425D58EEC008879CA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5234DBA225D58E4C008879CA /* Assets.xcassets */,
+				5234DBA725D58E4C008879CA /* Info.plist */,
+				5234DBB525D58EED008879CA /* UI */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5234DBB525D58EED008879CA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5234DBA425D58E4C008879CA /* LaunchScreen.storyboard */,
+				5234DB9F25D58E4B008879CA /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5234DBC125D5AA72008879CA /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				5234DBBE25D5AA6D008879CA /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		52CBFCC325E1BC8B009DE4F0 /* PedometerTests */ = {
+			isa = PBXGroup;
+			children = (
+				52CBFCC425E1BC8B009DE4F0 /* PedometerTests.swift */,
+				52CBFCC625E1BC8B009DE4F0 /* Info.plist */,
+			);
+			path = PedometerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5234DB9525D58E4A008879CA /* CoreMotionPedometer */ = {
+		5234DB9525D58E4A008879CA /* TrackActivity */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5234DBAA25D58E4C008879CA /* Build configuration list for PBXNativeTarget "CoreMotionPedometer" */;
+			buildConfigurationList = 5234DBAA25D58E4C008879CA /* Build configuration list for PBXNativeTarget "TrackActivity" */;
 			buildPhases = (
 				5234DB9225D58E4A008879CA /* Sources */,
 				5234DB9325D58E4A008879CA /* Frameworks */,
@@ -82,10 +182,28 @@
 			);
 			dependencies = (
 			);
-			name = CoreMotionPedometer;
+			name = TrackActivity;
 			productName = CoreMotionPedometer;
-			productReference = 5234DB9625D58E4A008879CA /* CoreMotionPedometer.app */;
+			productReference = 5234DB9625D58E4A008879CA /* TrackActivity.app */;
 			productType = "com.apple.product-type.application";
+		};
+		52CBFCC125E1BC8B009DE4F0 /* PedometerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52CBFCCB25E1BC8B009DE4F0 /* Build configuration list for PBXNativeTarget "PedometerTests" */;
+			buildPhases = (
+				52CBFCBE25E1BC8B009DE4F0 /* Sources */,
+				52CBFCBF25E1BC8B009DE4F0 /* Frameworks */,
+				52CBFCC025E1BC8B009DE4F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52CBFCC825E1BC8B009DE4F0 /* PBXTargetDependency */,
+			);
+			name = PedometerTests;
+			productName = PedometerTests;
+			productReference = 52CBFCC225E1BC8B009DE4F0 /* PedometerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -93,15 +211,19 @@
 		5234DB8E25D58E4A008879CA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1230;
-				LastUpgradeCheck = 1230;
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					5234DB9525D58E4A008879CA = {
 						CreatedOnToolsVersion = 12.3;
 					};
+					52CBFCC125E1BC8B009DE4F0 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 5234DB9525D58E4A008879CA;
+					};
 				};
 			};
-			buildConfigurationList = 5234DB9125D58E4A008879CA /* Build configuration list for PBXProject "CoreMotionPedometer" */;
+			buildConfigurationList = 5234DB9125D58E4A008879CA /* Build configuration list for PBXProject "TrackActivity" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,7 +236,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5234DB9525D58E4A008879CA /* CoreMotionPedometer */,
+				5234DB9525D58E4A008879CA /* TrackActivity */,
+				52CBFCC125E1BC8B009DE4F0 /* PedometerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -124,9 +247,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5234DBB825D59096008879CA /* Main.storyboard in Resources */,
 				5234DBA625D58E4C008879CA /* LaunchScreen.storyboard in Resources */,
 				5234DBA325D58E4C008879CA /* Assets.xcassets in Resources */,
-				5234DBA125D58E4B008879CA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52CBFCC025E1BC8B009DE4F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,10 +270,27 @@
 				5234DB9E25D58E4B008879CA /* ViewController.swift in Sources */,
 				5234DB9A25D58E4B008879CA /* AppDelegate.swift in Sources */,
 				5234DB9C25D58E4B008879CA /* SceneDelegate.swift in Sources */,
+				5234DBBF25D5AA6D008879CA /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52CBFCBE25E1BC8B009DE4F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52CBFCC525E1BC8B009DE4F0 /* PedometerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52CBFCC825E1BC8B009DE4F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5234DB9525D58E4A008879CA /* TrackActivity */;
+			targetProxy = 52CBFCC725E1BC8B009DE4F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5234DB9F25D58E4B008879CA /* Main.storyboard */ = {
@@ -158,6 +305,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				5234DBA525D58E4C008879CA /* Base */,
+				5234DBBB25D590D2008879CA /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -288,12 +436,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XWYBXAANR7;
-				INFOPLIST_FILE = CoreMotionPedometer/Info.plist;
+				INFOPLIST_FILE = TrackActivity/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.palaguachi.CoreMotionPedometer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.palaguachi.track.activity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,22 +456,65 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XWYBXAANR7;
-				INFOPLIST_FILE = CoreMotionPedometer/Info.plist;
+				INFOPLIST_FILE = TrackActivity/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.palaguachi.CoreMotionPedometer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.palaguachi.track.activity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
+		52CBFCC925E1BC8B009DE4F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XWYBXAANR7;
+				INFOPLIST_FILE = PedometerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.palaguachi.PedometerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrackActivity.app/TrackActivity";
+			};
+			name = Debug;
+		};
+		52CBFCCA25E1BC8B009DE4F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XWYBXAANR7;
+				INFOPLIST_FILE = PedometerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.palaguachi.PedometerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrackActivity.app/TrackActivity";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5234DB9125D58E4A008879CA /* Build configuration list for PBXProject "CoreMotionPedometer" */ = {
+		5234DB9125D58E4A008879CA /* Build configuration list for PBXProject "TrackActivity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5234DBA825D58E4C008879CA /* Debug */,
@@ -331,11 +523,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5234DBAA25D58E4C008879CA /* Build configuration list for PBXNativeTarget "CoreMotionPedometer" */ = {
+		5234DBAA25D58E4C008879CA /* Build configuration list for PBXNativeTarget "TrackActivity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5234DBAB25D58E4C008879CA /* Debug */,
 				5234DBAC25D58E4C008879CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52CBFCCB25E1BC8B009DE4F0 /* Build configuration list for PBXNativeTarget "PedometerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52CBFCC925E1BC8B009DE4F0 /* Debug */,
+				52CBFCCA25E1BC8B009DE4F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
