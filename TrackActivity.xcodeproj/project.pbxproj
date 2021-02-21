@@ -15,7 +15,7 @@
 		5234DBB825D59096008879CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5234DB9F25D58E4B008879CA /* Main.storyboard */; };
 		5234DBBF25D5AA6D008879CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5234DBBE25D5AA6D008879CA /* Constants.swift */; };
 		52CBFCC525E1BC8B009DE4F0 /* PedometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CBFCC425E1BC8B009DE4F0 /* PedometerTests.swift */; };
-		52CBFCDC25E1C7B0009DE4F0 /* PedometorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CBFCDB25E1C7AF009DE4F0 /* PedometorManager.swift */; };
+		52CBFCDC25E1C7B0009DE4F0 /* PedometerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CBFCDB25E1C7AF009DE4F0 /* PedometerHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,7 @@
 		52CBFCC225E1BC8B009DE4F0 /* PedometerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PedometerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CBFCC425E1BC8B009DE4F0 /* PedometerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerTests.swift; sourceTree = "<group>"; };
 		52CBFCC625E1BC8B009DE4F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52CBFCDB25E1C7AF009DE4F0 /* PedometorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometorManager.swift; sourceTree = "<group>"; };
+		52CBFCDB25E1C7AF009DE4F0 /* PedometerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +173,7 @@
 		52CBFCDA25E1C780009DE4F0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				52CBFCDB25E1C7AF009DE4F0 /* PedometorManager.swift */,
+				52CBFCDB25E1C7AF009DE4F0 /* PedometerHandler.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -279,7 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5234DB9E25D58E4B008879CA /* ViewController.swift in Sources */,
-				52CBFCDC25E1C7B0009DE4F0 /* PedometorManager.swift in Sources */,
+				52CBFCDC25E1C7B0009DE4F0 /* PedometerHandler.swift in Sources */,
 				5234DB9A25D58E4B008879CA /* AppDelegate.swift in Sources */,
 				5234DB9C25D58E4B008879CA /* SceneDelegate.swift in Sources */,
 				5234DBBF25D5AA6D008879CA /* Constants.swift in Sources */,
