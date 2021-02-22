@@ -14,6 +14,7 @@
 		5234DBA625D58E4C008879CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5234DBA425D58E4C008879CA /* LaunchScreen.storyboard */; };
 		5234DBB825D59096008879CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5234DB9F25D58E4B008879CA /* Main.storyboard */; };
 		5234DBBF25D5AA6D008879CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5234DBBE25D5AA6D008879CA /* Constants.swift */; };
+		52A8348525E343F900A43B8B /* PedometerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8348425E343F900A43B8B /* PedometerProtocols.swift */; };
 		52CBFCC525E1BC8B009DE4F0 /* PedometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CBFCC425E1BC8B009DE4F0 /* PedometerTests.swift */; };
 		52CBFCDC25E1C7B0009DE4F0 /* PedometerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CBFCDB25E1C7AF009DE4F0 /* PedometerHandler.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,7 @@
 		5234DBA725D58E4C008879CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5234DBBB25D590D2008879CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		5234DBBE25D5AA6D008879CA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		52A8348425E343F900A43B8B /* PedometerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerProtocols.swift; sourceTree = "<group>"; };
 		52CBFCC225E1BC8B009DE4F0 /* PedometerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PedometerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CBFCC425E1BC8B009DE4F0 /* PedometerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerTests.swift; sourceTree = "<group>"; };
 		52CBFCC625E1BC8B009DE4F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		5234DBAF25D58EAF008879CA /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				52A8348325E343E300A43B8B /* Protocols */,
 				5234DBC125D5AA72008879CA /* Constants */,
 			);
 			path = Commons;
@@ -159,6 +162,14 @@
 				5234DBBE25D5AA6D008879CA /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		52A8348325E343E300A43B8B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				52A8348425E343F900A43B8B /* PedometerProtocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		52CBFCC325E1BC8B009DE4F0 /* PedometerTests */ = {
@@ -281,6 +292,7 @@
 				5234DB9E25D58E4B008879CA /* ViewController.swift in Sources */,
 				52CBFCDC25E1C7B0009DE4F0 /* PedometerHandler.swift in Sources */,
 				5234DB9A25D58E4B008879CA /* AppDelegate.swift in Sources */,
+				52A8348525E343F900A43B8B /* PedometerProtocols.swift in Sources */,
 				5234DB9C25D58E4B008879CA /* SceneDelegate.swift in Sources */,
 				5234DBBF25D5AA6D008879CA /* Constants.swift in Sources */,
 			);

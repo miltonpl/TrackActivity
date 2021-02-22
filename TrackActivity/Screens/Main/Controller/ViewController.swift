@@ -24,17 +24,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.pedometerHandler.delegate = self
     }
-    
     // MARK: - IBAction StartStopPedometer
     @IBAction func startStopPedometer(_ sender: UIButton) {
-        self.pedometerHandler.startStopPedometer(sender)
+        self.pedometerHandler.startStopPedometer(sender.titleLabel?.text ?? "")
     }
-  
 }
 
 // MARK: - Pedometor Handler Delegate
 
 extension ViewController: PedometorHandlerDelegate {
+    
+    func setupPedometerStatusButton(_ text: String, _ background: UIColor) {
+        self.startStopRedometer.setTitle(text, for: .normal)
+        self.startStopRedometer.backgroundColor = background
+    }
     
     func paceLabel(_ text: String) {
         self.paceLabel.text = text

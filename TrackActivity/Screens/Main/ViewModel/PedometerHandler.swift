@@ -8,13 +8,6 @@
 import UIKit
 import CoreMotion
 
-protocol PedometorHandlerDelegate: AnyObject {
-    func paceLabel(_ text: String)
-    func stepsLabel(_ text: String)
-    func distanceLabel(_ text: String)
-    func statusLabel(_ text: String)
-}
-
 class PedometerHandler {
     
     private var pedometerData = CMPedometerData()
@@ -31,25 +24,23 @@ class PedometerHandler {
     private var elepsedSeconds: Double = 0.0
     private var interval: Double = 0.1
     
-    // MARK: Private Methods
-    func startStopPedometer(_ sender: UIButton) {
-        if sender.titleLabel?.text == PedometerStatus.start {
+    func startStopPedometer(_ text: String) {
+        if text == PedometerStatus.start {
             self.delegate?.statusLabel(PedometerStatus.pedemeterOn)
-            sender.setTitle(PedometerStatus.stop, for: .normal)
-            sender.backgroundColor = PedometerStatusColor.stopRed
-            self.stepCountingIfAvailabel()
+            self.delegate?.setupPedometerStatusButton(PedometerStatus.stop,PedometerStatusColor.stopRed)
+            self.pedometerStartUpdates()
             
-        } else {
+        } else if text == PedometerStatus.stop {
             self.pedometer.stopUpdates()
             self.stopTimer()
             self.delegate?.statusLabel(PedometerStatus.pedemeterOff)
-            sender.backgroundColor = PedometerStatusColor.goGreen
-            sender.setTitle(PedometerStatus.start, for: .normal)
+            self.delegate?.setupPedometerStatusButton(PedometerStatus.start,PedometerStatusColor.goGreen)
         }
     }
+    // MARK: Private Methods
     
-    //MARK: - Check If SteipCounting is Available
-    private func stepCountingIfAvailabel() {
+    //MARK: - Check If StepCounting is Available
+    private func pedometerStartUpdates() {
         if CMPedometer.isStepCountingAvailable() {
             self.startTimer()
             self.pedometer.startUpdates(from: Date()) {[weak self] pedometerData, error in
@@ -60,24 +51,6 @@ class PedometerHandler {
         } else {
             print("Step Counting Not Available")
         }
-    }
-    
-    // MARK: Start Timer
-    private func startTimer() {
-        print("Start Timer \(Date())")
-        guard !self.timer.isValid else { return }
-        //Intervar: 1 second
-        self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [unowned self] _ in
-            self.displayPedometerData()
-            self.elepsedSeconds += self.interval
-        })
-    }
-    
-    // MARK: Stop Timer
-    private func stopTimer() {
-//        print("Stop Timer \(Date())")
-        self.timer.invalidate()
-        self.displayPedometerData()
     }
     
     // MARK: Display Pedometer Data
@@ -96,10 +69,32 @@ class PedometerHandler {
         //Pace
         self.updatePace()
     }
+}
+
+extension PedometerHandler: PedometorTimer {
+    // MARK: Start Timer
+    func startTimer() {
+        print("Start Timer \(Date())")
+        guard !self.timer.isValid else { return }
+        //Intervar: 1 second
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [unowned self] _ in
+            self.displayPedometerData()
+            self.elepsedSeconds += self.interval
+        })
+    }
+    
+    // MARK: Stop Timer
+    func stopTimer() {
+        print("Stop Timer \(Date())")
+        self.timer.invalidate()
+        self.displayPedometerData()
+    }
+}
+
+extension PedometerHandler: PedometerPace {
     
     // MARK: -  Update Pace
-    
-    private func updatePace() {
+    func updatePace() {
         if CMPedometer.isPaceAvailable() {
             guard let pedometerPace = self.pedometerData.averageActivePace, let pace = pedometerPace as? Double else {
                 self.delegate?.paceLabel("Pace: N/A")
@@ -113,6 +108,8 @@ class PedometerHandler {
         }
     }
     
+    // MARK: -  Convert Minutes to Seconds
+
     func minutesSeconds(_ seconds: Double) -> String {
         let minute = Int(seconds)/60
         let secondsPart = Int(seconds) % 60
@@ -120,6 +117,8 @@ class PedometerHandler {
         
     }
     
+    // MARK: -  Calculate Pace
+
     func calculatedPace() -> Double {
         return (self.distance > 0.0) ? self.elepsedSeconds/self.distance : 0.0
     }
